@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "Main";
+option java_package = "io.grpc.main";
+
+package main;
+
+message Request {
+    bytes frame = 1;
+    bytes pcmData = 2;
+    string captionFlag = 3;
+    int32 dB = 4;
+    string object = 5;
+}
+
+message Response {
+    string sttText = 1;
+    string captionText = 2;
+    bytes audioData = 3;
+    string bbox = 4;
+}
+
+service MainService {
+    rpc DataStreaming(stream Request) returns (stream Response) {}
+}

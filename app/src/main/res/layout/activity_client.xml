@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClientActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <SurfaceView
+            android:layout_alignParentTop="true"
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <SurfaceView
+            android:layout_alignParentTop="true"
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_base_height="540"
+            app:scale_base_width="400">
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0057D1"
+                android:gravity="center"
+                app:scale_textsize="20"
+                app:textview_wrapcontent_direction="bottom"
+                app:textview_wrapcontent_resizesurrounded="true"
+                app:textview_wrapcontent_movesiblings="true"
+                app:scale_height="45"
+                app:scale_left="10"
+                app:scale_top="450"
+                app:scale_width="380" />
+
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
